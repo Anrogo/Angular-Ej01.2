@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorTailorModule } from '@ngneat/error-tailor';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { ErrorTailorModule } from '@ngneat/error-tailor';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
+        RouterModule,
         ErrorTailorModule.forRoot({
             errors: {
                 //For each type of error that can be filtered by Validatiors, a corresponding message will be displayed.

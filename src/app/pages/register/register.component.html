@@ -12,8 +12,8 @@
     <div class="row mt-4">
         <div class="col-md-12">
             <form class="row g-4" (ngSubmit)="onSubmit()" role="form" [formGroup]="registerForm" errorTailor>
-                <div class="alert alert-warning" *ngIf="!registerForm.valid">Revise los campos y rellene los que son obligatorios como mínimo</div>
-                <div class="alert alert-info" *ngIf="registerForm.valid">Tras enviar el mensaje será redirigido al Login
+                <div class="alert alert-warning" *ngIf="!registerForm.valid">Revise los campos y, como mínimo, rellene los que son obligatorios que están señalados en rojo, gracias.</div>
+                <div class="alert alert-info" *ngIf="registerForm.valid">Todos los campos son correctos, puede enviar el formulario de registro, gracias.
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="col input-group">

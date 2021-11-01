@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormsModule, NgForm, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { RegisterForm } from 'src/app/models/registerForm';
@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
     private router: Router,
   ) {
     //Title:
-    this._titleService.setTitle('Register');
+    this._titleService.setTitle('Registro');
 
     //List of Regions in API/service:
     this.regionsList = _registerService.getRegions();
@@ -51,9 +51,6 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(): void {
     if (this.checkPasswords()) {
-
-      //Remove error of password:
-      
 
       //Convert form data to object
       let value: RegisterForm = new RegisterForm(
